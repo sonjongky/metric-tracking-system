@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URI")
+}
+
+enum Unit {
+  METER              @map("METER")
+  CENTIMETER         @map("CENTIMETER")
+  INCH               @map("INCH")
+  FEET @map("FEET")
+  YARD @map("YARD")
+  C @map("C")
+  F @map("F")
+  K @map("K")
+}
+
+enum Type {
+  DISTANCE      @map("DISTANCE")
+  TEMPERATURE   @map("TEMPERATURE")
+}
+
+
+model Metric {
+  id                       String    @id @default(uuid())
+  date                     DateTime  @db.Timestamptz(3)
+  value                    Int
+  unit                     Unit
+  type                     Type
+  createdAt                DateTime  @default(now()) @db.Timestamptz(3)
+  updatedAt                DateTime  @updatedAt @db.Timestamptz(3)
+  deletedAt                DateTime? @db.Timestamptz(3)
+
+  @@map("metrics")
+}
+
+

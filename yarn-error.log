@@ -1,0 +1,93 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\son.nguyen\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\quyen.phan\AppData\Local\Programs\Python\Python310;C:\ProgramData\chocolatey\bin;C:\Users\son.nguyen\AppData\Roaming\Python\Python310\Scripts;C:\Program Files\dotnet\;C:\Users\son.nguyen\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\son.nguyen\AppData\Local\Microsoft\WindowsApps;C:\Users\son.nguyen\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\son.nguyen\AppData\Roaming\npm;C:\msys64\mingw64\bin;C:\Users\son.nguyen\.dotnet\tools;C:\Users\son.nguyen\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Sioux\Tracking\package.json: Unexpected token } in JSON at position 1087
+      at JSON.parse (<anonymous>)
+      at C:\Users\son.nguyen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\son.nguyen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\son.nguyen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "metric-tracking-api",
+    "version": "0.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "build": "npx prisma generate && npx webpack --mode production",
+      "dev": "ts-node-dev --files src/index.ts",
+      "start": "node dist/index.js",
+      "test": "jest --runInBand",
+      "create-user": "npx prisma generate && npx ts-node src/scripts/create-user.ts",
+      "create-client": "npx prisma generate && npx ts-node src/scripts/create-client.ts",
+      "update-password": "npx prisma generate && npx ts-node src/scripts/update-password.ts",
+      "generate-insert-sql": "npx ts-node src/scripts/generate-insert-sql.ts",
+      "generate-swagger": "npx ts-node src/scripts/generate-swagger.ts"
+    },
+    "dependencies": {
+      "@prisma/client": "^4.16.0",
+      "axios": "^1.4.0",
+      "body-parser": "^1.20.2",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.3",
+      "express": "^5.0.0-beta.1",
+      "joi": "^17.9.2",
+      "pg": "^8.11.0",
+      "qs": "^6.11.2",
+      "readline": "^1.3.0",
+      "ssl-root-cas": "^1.3.1",
+      "swagger-jsdoc": "^6.2.8",
+      "swagger-ui-express": "^5.0.0",
+    },
+    "devDependencies": {
+      "@types/cors": "^2.8.13",
+      "@types/multer": "^1.4.7",
+      "@types/node": "^20.2.5",
+      "@types/node-schedule": "^2.1.0",
+      "@types/nodemailer": "^6.4.9",
+      "@types/passport": "^1.0.12",
+      "@types/passport-jwt": "^3.0.8",
+      "@types/swagger-jsdoc": "^6.0.1",
+      "@types/swagger-ui-express": "^4.1.4",
+      "@typescript-eslint/eslint-plugin": "^5.50.0",
+      "@typescript-eslint/parser": "^5.59.8",
+      "eslint": "^8.0.1",
+      "eslint-config-airbnb-base": "^15.0.0",
+      "eslint-config-airbnb-typescript": "^17.0.0",
+      "eslint-config-prettier": "^8.8.0",
+      "eslint-plugin-import": "^2.27.5",
+      "eslint-plugin-node": "^11.1.0",
+      "eslint-plugin-promise": "^6.1.1",
+      "eslint-plugin-standard": "^5.0.0",
+      "jest": "^29.6.1",
+      "prettier": "^3.0.0",
+      "prisma": "^4.16.0",
+      "ts-jest": "^29.1.1",
+      "ts-loader": "^9.4.3",
+      "ts-node-dev": "^2.0.0",
+      "typescript": "*",
+      "webpack": "^5.85.0",
+      "webpack-cli": "^5.1.1",
+      "webpack-node-externals": "^3.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
