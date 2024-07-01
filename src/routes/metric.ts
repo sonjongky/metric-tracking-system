@@ -4,9 +4,9 @@ import { createMetric, findMetrics } from '../services/metricService';
 const router = Router();
 
 router.get('/', async (req, res) => {
-  const users = await findMetrics(req.query);
+  const metrics = await findMetrics(req.query);
 
-  res.status(200).json(users);
+  res.status(200).json(metrics);
 });
 
 router.post('/', async (req, res) => {
