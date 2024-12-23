@@ -10,6 +10,7 @@ export enum TemperatureUnit {
   C = 'C',
   F = 'F',
   K = 'K',
+  S = 'S',
 }
 
 export enum Unit {
